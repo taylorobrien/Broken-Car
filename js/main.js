@@ -95,7 +95,7 @@ Phaser.Tilemap.TILED_JSON);
 	this.player.scale.set(.75,.75);
 	this.game.camera.follow(this.player);
 
-	
+
 
 	this.game.physics.arcade.gravity.y = 200;
 
