@@ -25,6 +25,7 @@ P2Game.StateA = function (game) {
     this.a = .5;
     this.hastools = false;
     this.tools;
+    this.music;
 },
 
 P2Game.StateA.prototype = {
@@ -43,6 +44,9 @@ Phaser.Tilemap.TILED_JSON);
 	this.load.spritesheet('player', 'assets/girl-sprite.png',31, 48, 8); 
 	this.load.spritesheet('smoke', 'assets/smoke-sprite.png',64, 58, 6);
 	this.load.spritesheet('wolf', 'assets/wolf-sprite.png',108, 51, 12); 
+	this.load.audio('forest',['assets/forest.mp3','assets/forest.ogg']);
+
+
 
     },
 
@@ -55,6 +59,8 @@ Phaser.Tilemap.TILED_JSON);
 	this.sign = this.game.add.sprite(150,60,'sign');
 	this.sign.scale.set(.4,.4);
 
+	this.music = this.game.add.audio('forest');
+	this.music.play('',0,1,true);
 
 	this.smoke = this.game.add.sprite(60,83,'smoke');
 	this.smoke.animations.add('smoking', [0,1,2,3,4,5],6,true);
@@ -337,3 +343,13 @@ game.state.start('StateA');
 //http://www.wikihow.com/images/e/eb/594851-11.jpg
 //http://static.giantbomb.com/uploads/original/12/126604/2430869-7835230262-starf.gif
 //http://fc03.deviantart.net/fs70/f/2013/177/9/e/bina___rpg_sprites__request__by_lagoon_sadnes-d6atbky.png//http://felicemagazine.weebly.com/uploads/2/1/8/7/21874606/9978435_orig.png
+
+//http://greatleadersserve.com/wp-content/uploads/2012/08/iStock_000020378687XSmall.jpg
+//http://imageshack.com/handle_redirect.php?ser=233&file=animations2222223.png
+//http://cliparts.co/cliparts/8cz/nLb/8cznLbR7i.png
+//http://previews.123rf.com/images/zentilia/zentilia1111/zentilia111100067/11503913-3d-rendering-of-blank-signs-pointing-in-opposite-directions-Stock-Photo.jpg
+//http://img3.wikia.nocookie.net/__cb20130304122439/sonic/images/d/d3/Spikes_in_Sonic_the_Hedgehog_4.png
+//http://www.wikihow.com/images/e/eb/594851-11.jpg
+//http://static.giantbomb.com/uploads/original/12/126604/2430869-7835230262-starf.gif
+//http://fc03.deviantart.net/fs70/f/2013/177/9/e/bina___rpg_sprites__request__by_lagoon_sadnes-d6atbky.png//http://felicemagazine.weebly.com/uploads/2/1/8/7/21874606/9978435_orig.png
+
