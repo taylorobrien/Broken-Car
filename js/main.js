@@ -243,7 +243,7 @@ else if (this.cursors.up.isDown && this.player.body.onFloor())
 
        
 
-        this.game.debug.text("State A", 32, 560);
+       // this.game.debug.text("State A", 32, 560);
 
     }
 
